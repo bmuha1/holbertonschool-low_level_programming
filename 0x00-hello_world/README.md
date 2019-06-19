@@ -21,3 +21,9 @@ Print a string using printf
 
 6-size.c
 Print the size of various data types
+
+100-intel
+Generate the assembly code (Intel syntax) of a C file
+
+101-quote.c
+Print a quote to the standard error without using printf or puts
