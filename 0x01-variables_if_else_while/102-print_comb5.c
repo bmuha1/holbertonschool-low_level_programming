@@ -21,8 +21,9 @@ int main(void)
 				for (ones2 = 0; ones2 <= 9; ones2++)
 				{
 					if ((tens1 == 0 && ones1 == 0 &&
-					     ones2 != 0) ||
-					    (tens2 >= tens1 && ones2 > ones1))
+					     ones2 != 0) || (tens2 >= tens1 &&
+							     (ones2 > ones1
+							      || tens2 > tens1)))
 					{
 						putchar(tens1 + '0');
 						putchar(ones1 + '0');
