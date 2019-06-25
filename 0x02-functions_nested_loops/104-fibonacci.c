@@ -23,7 +23,7 @@ int main(void)
 
 	printf("%lu, %lu, ", smalln2, smalln1);
 
-	for (i = 2; i < 98; i++)
+	for (i = 2; i <= 98; i++)
 	{
 		if (largen2 != 0)
 			largen = largen1 + largen2 +
@@ -35,7 +35,7 @@ int main(void)
 
 		if (largen != 0)
 			printf("%lu", largen);
-		if (i == 97)
+		if (i == 98)
 			printf("%lu\n", smalln);
 		else
 			printf("%lu, ", smalln);
