@@ -7,6 +7,7 @@
  */
 int main(void)
 {
+	const long big = 1000000000000;
 	unsigned long largen;
 	unsigned long smalln;
 	unsigned long largen1;
@@ -14,7 +15,6 @@ int main(void)
 	unsigned long largen2;
 	unsigned long smalln2;
 	int i;
-	const long big = 1000000000000;
 
 	largen2 = 1 / big;
 	smalln2 = 1 % big;
@@ -27,8 +27,7 @@ int main(void)
 	{
 		if (largen2 != 0)
 			largen = largen1 + largen2 +
-				((smalln1 % big) + (smalln2 % big)) /
-				big;
+				((smalln1 % big) + (smalln2 % big)) / big;
 		else
 			largen = ((smalln2 + smalln1) / big) + largen1;
 
