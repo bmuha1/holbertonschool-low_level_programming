@@ -7,41 +7,44 @@
  */
 int main(void)
 {
-	unsigned long fib[98];
-	unsigned long large[98];
-	unsigned long small[98];
-
+	unsigned long largen;
+	unsigned long smalln;
+	unsigned long largen1;
+	unsigned long smalln1;
+	unsigned long largen2;
+	unsigned long smalln2;
 	int i;
 	const long big = 1000000000000;
 
-	fib[0] = 1;
-	fib[1] = 2;
-	large[0] = 1 / big;
-	small[0] = 1 % big;
-	large[1] = 2 / big;
-	small[1] = 2 % big;
+	largen2 = 1 / big;
+	smalln2 = 1 % big;
+	largen1 = 2 / big;
+	smalln1 = 2 % big;
+
+	printf("%lu, %lu, ", smalln2, smalln1);
 
 	for (i = 2; i < 98; i++)
 	{
-		fib[i] = fib[i - 1] + fib[i - 2];
-
-		if (large[i - 2] != 0)
-			large[i] = large[i - 1] + large[i - 2] +
-				((small[i - 1] % big) + (small[i - 2] % big)) /
+		if (largen2 != 0)
+			largen = largen1 + largen2 +
+				((smalln1 % big) + (smalln2 % big)) /
 				big;
 		else
-			large[i] = (fib[i - 1] + fib[i - 2]) / big;
+			largen = ((smalln2 + smalln1) / big) + largen1;
 
-		small[i] = ((small[i - 1] % big) + (small[i - 2] % big)) % big;
+		smalln = ((smalln1 % big) + (smalln2 % big)) % big;
+
+		if (largen != 0)
+			printf("%lu", largen);
+		if (i == 97)
+			printf("%lu\n", smalln);
+		else
+			printf("%lu, ", smalln);
+
+		largen2 = largen1;
+		smalln2 = smalln1;
+		largen1 = largen;
+		smalln1 = smalln;
 	}
-
-	for (i = 0; i < 97; i++)
-	{
-		if (large[i] != 0)
-			printf("%lu", large[i]);
-		printf("%lu, ", small[i]);
-	}
-	printf("%lu%lu\n", large[i], small[i]);
-
 	return (0);
 }
