@@ -20,6 +20,7 @@ int main(void)
 	smalln2 = 1 % big;
 	largen1 = 2 / big;
 	smalln1 = 2 % big;
+	largen = 0;
 
 	printf("%lu, %lu, ", smalln2, smalln1);
 
@@ -33,10 +34,10 @@ int main(void)
 
 		smalln = ((smalln1 % big) + (smalln2 % big)) % big;
 
-		if (largen != 0)
-			printf("%lu", largen);
 		if (i == 97)
-			printf("%lu\n", smalln);
+			printf("%lu%012lu\n", largen, smalln);
+		else if (largen != 0)
+			printf("%lu%012lu, ", largen, smalln);
 		else
 			printf("%lu, ", smalln);
 
