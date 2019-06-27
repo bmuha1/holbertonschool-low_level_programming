@@ -33,30 +33,18 @@ int main(void)
  */
 int prime(int p)
 {
-	int i, is_prime;
+	int i;
 
 	if (p < 2)
 		return (0);
-
-	is_prime = 1;
-
-	if (p % 2 != 0)
-	{
-		for (i = 2; i < p; i++)
-		{
-			if (is_prime == 0)
-				i = p;
-			if (p % i == 0)
-				is_prime = 0;
-		}
-	}
 	else if (p == 2)
-		is_prime = 1;
-	else
-		is_prime = 0;
-
-	if (is_prime)
 		return (1);
-	else
-		return (0);
+
+	for (i = 2; i < p; i++)
+	{
+		if (p % i == 0)
+			return (0);
+	}
+
+	return (1);
 }
