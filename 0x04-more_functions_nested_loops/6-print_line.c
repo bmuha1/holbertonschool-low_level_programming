@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_line(int n) - Print a straight line using underscores
+ * print_line - Print a straight line using underscores
  * @n: The number of underscores to print
  */
 void print_line(int n)
