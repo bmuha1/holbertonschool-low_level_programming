@@ -35,3 +35,9 @@ Print numbers from 1 to 100 "FizzBuzz style"
 
 10-print_triangle.c
 Print a triangle
+
+100-prime_factor.c
+Print the largest prime factor of 612852475143
+
+101-print_number.c
+Print an integer
