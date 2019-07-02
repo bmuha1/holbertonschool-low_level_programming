@@ -12,6 +12,7 @@ int _atoi(char *s)
 
 	start = -1;
 	negative = 0;
+	number = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
@@ -29,13 +30,11 @@ int _atoi(char *s)
 
 	if (start != -1)
 	{
-		number = 0;
 		for (i = 0; s[i] != '\0'; i++)
 		{
 			if (s[i] >= '0' && s[i] <= '9')
-			{
 				number = number * 10 + s[i] - '0';
-			}
+
 			if ((s[i] < '0' || s[i] > '9') &&
 			    (s[i - 1] >= '0' && s[i - 1] <= '9'))
 				break;
