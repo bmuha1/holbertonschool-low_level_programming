@@ -11,18 +11,19 @@ int main(void)
 {
 	int i, offset, total;
 	char c[50] = "";
-	char letters[] = "BMTc";
+/*	char letters[] = "BMTc";*/
 
 	srand(time(NULL));
 
 	total = 0;
-	offset = rand() % 4;
-
-	for (i = 0; total < 2772; i++)
+	for (i = 0; total < (2772 - 100); i++)
 	{
-		c[i] = letters[offset];
+		offset = 33 + rand() % 94;
+		c[i] = offset;
 		total += c[i];
 	}
+	c[i] = 2772 - total;
+	i++;
 	c[i] = '\0';
 	printf("%s", c);
 
