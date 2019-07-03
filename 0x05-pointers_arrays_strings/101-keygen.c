@@ -11,7 +11,6 @@ int main(void)
 {
 	int i, offset, total;
 	char c[50] = "";
-/*	char letters[] = "BMTc";*/
 
 	srand(time(NULL));
 
@@ -25,6 +24,7 @@ int main(void)
 	c[i] = 2772 - total;
 	i++;
 	c[i] = '\0';
+
 	printf("%s", c);
 
 	return (0);
