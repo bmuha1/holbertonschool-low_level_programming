@@ -33,5 +33,8 @@ Print an integer
 101-magic.c
 Add a "magic" line of code to print 98 instead of 1024
 
+102-infinite_add.c
+Add two numbers
+
 103-print_buffer.c
 Print a buffer
