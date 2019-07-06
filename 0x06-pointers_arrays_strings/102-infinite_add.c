@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * infinite_add - Adds two numbers
+ * infinite_add - Add two numbers
  * @n1: The first number to add
  * @n2: The second number to add
  * @r: The buffer to store the result
