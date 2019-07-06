@@ -42,17 +42,13 @@ void print_line(char *b, int position, int n)
 
 	printf("%08x: ", position);
 
-	for (i = 0; i < n; i++)
+	for (i = 0; i < 10; i++)
 	{
-		printf("%02x", b[i]);
+		if (i < n)
+			printf("%02x", b[i]);
+		else
+			printf("  ");
 
-		if (i % 2)
-			putchar(' ');
-	}
-
-	for (i = n; i < 10; i++)
-	{
-		printf("  ");
 		if (i % 2)
 			putchar(' ');
 	}
