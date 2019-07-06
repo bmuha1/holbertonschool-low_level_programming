@@ -26,3 +26,12 @@ Encode a string into 1337
 
 8-rot13.c
 Encode a string using rot13
+
+100-print_number.c
+Print an integer
+
+101-magic.c
+Add a "magic" line of code to print 98 instead of 1024
+
+103-print_buffer.c
+Print a buffer
