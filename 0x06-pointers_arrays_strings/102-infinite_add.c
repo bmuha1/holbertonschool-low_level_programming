@@ -11,14 +11,13 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i, size_n1, size_n2, max_size, pos1, pos2, tmp1, tmp2, remainder;
+	int i, size_n1, size_n2, pos1, pos2, tmp1, tmp2, remainder;
 
 	size_n1 = pos1 = _strlen(n1);
 	size_n2 = pos2 = _strlen(n2);
-	max_size = largest_number(size_n1, size_n2, size_r);
 
 	remainder = 0;
-	for (i = max_size; i >= 0; i--)
+	for (i = size_r; i >= 0; i--)
 	{
 		tmp1 = tmp2 = 0;
 		if (n1[pos1] >= '0' && n1[pos1] <= '9' && pos1 >= 0)
@@ -36,7 +35,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		pos1--;
 		pos2--;
 	}
-	r[max_size] = '\0';
+	r[size_r] = '\0';
 
 	if ((size_r <= size_n1) || (size_r <= size_n2) ||
 	    (r[0] > '0' && (size_r <= size_n1 + 1 || size_r <= size_n2 + 1)))
@@ -67,32 +66,4 @@ int _strlen(char *s)
 		length++;
 
 	return (length);
-}
-
-/**
- * largest_number - Return the largest of 3 integers
- * @a: First integer
- * @b: Second integer
- * @c: Third integer
- *
- * Return: The largest number
- */
-int largest_number(int a, int b, int c)
-{
-	int largest;
-
-	if (a >= b && a >= c)
-	{
-		largest = a;
-	}
-	else if (b >= a && b >= c)
-	{
-		largest = b;
-	}
-	else
-	{
-		largest = c;
-	}
-
-	return (largest);
 }
