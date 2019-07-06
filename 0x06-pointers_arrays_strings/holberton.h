@@ -13,6 +13,8 @@ char *leet(char *s);
 char *rot13(char *s);
 void print_number(int n);
 char *infinite_add(char *n1, char *n2, char *r, int size_r);
+int _strlen(char *s);
+int largest_number(int a, int b, int c);
 void print_buffer(char *b, int size);
 void print_line(char *b, int position, int n);
 
