@@ -1,5 +1,8 @@
 This project is for getting more practice with pointers, arrays, and strings
 
+holberton.h
+Contains prototypes of all the functions in this directory
+
 0-strcat.c
 Concatenate two strings
 
@@ -31,7 +34,7 @@ Encode a string using rot13
 Print an integer
 
 101-magic.c
-Add a "magic" line of code to print 98 instead of 1024
+Use pointers to "magically" update a number in an array
 
 102-infinite_add.c
 Add two numbers
