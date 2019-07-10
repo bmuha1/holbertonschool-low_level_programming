@@ -13,6 +13,9 @@ char *_strstr(char *haystack, char *needle)
 	int i, j, size_haystack, size_needle;
 	char *p = '\0';
 
+	if (needle[0] == '\0')
+		return (haystack);
+
 	size_haystack = _strlen(haystack);
 	size_needle = _strlen(needle);
 
@@ -34,9 +37,6 @@ char *_strstr(char *haystack, char *needle)
 			}
 		}
 	}
-
-	if (needle[0] == '\0')
-		return (&haystack[i]);
 
 	return (p);
 }
