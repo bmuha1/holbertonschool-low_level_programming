@@ -19,7 +19,7 @@ int is_palindrome(char *s)
 }
 
 /**
- * check_prime - Recursively check if a string is a palindrome
+ * check_palindrome - Recursively check if a string is a palindrome
  * @s: The string
  * @length: The length of the string
  * @c1: The first character to check
