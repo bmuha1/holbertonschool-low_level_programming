@@ -29,3 +29,6 @@ Print sums of the diagonals of a square matrix of integers
 
 9-set_string.c
 Set the value of a pointer to a char
+
+101-crackme_password
+The password for the crackme2 executable, generated using ltrace
