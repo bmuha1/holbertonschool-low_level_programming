@@ -34,10 +34,17 @@ int check_wildcmp(char *s1, char *s2, int l1, int l2, int c1, int c2)
 		return (1);
 	else if (s1[c1] == s2[c2])
 		return (check_wildcmp(s1, s2, l1, l2, c1 + 1, c2 + 1));
+	else if ((s1[c1] == '\0') && s2[c2] != '*')
+		return (0);
+	else if ((s2[c2] == '\0') && s1[c1] != '*')
+		return (0);
 	else if (s2[c2] == '*')
 	{
-		return (check_wildcmp(s1, s2, l1, l2, c1 + 1, c2) ||
-			check_wildcmp(s1, s2, l1, l2, c1, c2 + 1));
+		if (s2[c2 + 1] == '*')
+			return (check_wildcmp(s1, s2, l1, l2, c1, c2 + 1));
+		else
+			return (check_wildcmp(s1, s2, l1, l2, c1 + 1, c2) ||
+				check_wildcmp(s1, s2, l1, l2, c1, c2 + 1));
 	}
 	else
 		return (0);
