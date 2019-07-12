@@ -1,12 +1,12 @@
 This project is for learning how to create our own static libraries
 
-create_static_lib.sh__
+create_static_lib.sh<br/>
 Creates a static library from all .c files in the current directory
 
-holberton.h__
+holberton.h<br/>
 Contains prototypes of all the functions used in my static library
 
-libholberton.a__
+libholberton.a<br/>
 My custom static library containing the functions listed below
 
 Functions contained in my static library:
