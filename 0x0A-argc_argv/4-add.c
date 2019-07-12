@@ -33,6 +33,12 @@ int main(int argc, char *argv[])
 	return (0);
 }
 
+/**
+ * is_positive_number - Check if a string contains only digits
+ * @number: The string to check
+ *
+ * Return: 1 if string contains only digits, 0 otherwise
+ */
 int is_positive_number(char *number)
 {
 	int i;
