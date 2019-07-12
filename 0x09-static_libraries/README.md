@@ -9,7 +9,7 @@ Contains prototypes of all the functions used in my static library
 libholberton.a<br/>
 My custom static library containing the functions listed below
 
-Functions contained in my static library:
+Functions contained in my static library:<br>
 int _putchar(char c);
 int _islower(int c);
 int _isalpha(int c);
