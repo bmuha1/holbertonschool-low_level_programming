@@ -12,7 +12,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, sum;
+	int i;
+	unsigned int sum;
 
 	sum = 0;
 	for (i = 1; i < argc; i++)
@@ -28,7 +29,7 @@ int main(int argc, char *argv[])
 		}
 	}
 
-	printf("%d\n", sum);
+	printf("%u\n", sum);
 
 	return (0);
 }
