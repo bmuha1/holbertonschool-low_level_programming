@@ -1,0 +1,46 @@
+#include <stdlib.h>
+#include "holberton.h"
+
+/**
+ * str_concat - Concatenate two strings
+ * @s1: The first string
+ * @s2: The second string
+ *
+ * Return: Pointer to newly allocated space containing both strings,
+ * or NULL if failure
+ */
+char *str_concat(char *s1, char *s2)
+{
+	int i;
+	char *cat;
+	int size1 = _strlen(s1);
+	int size2 = _strlen(s2);
+
+	cat = malloc(sizeof(char) * (size1 + size2) + 1);
+	for (i = 0; i < size1; i++)
+		cat[i] = s1[i];
+	for (; i < size1 + size2; i++)
+		cat[i] = s2[i - size1];
+	cat[i] = '\0';
+
+	if (cat == NULL)
+		return (NULL);
+
+	return (cat);
+}
+
+/**
+ * _strlen - Return the length of a string
+ * @s: The string to check
+ *
+ * Return: The length of the string
+ */
+int _strlen(char *s)
+{
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+		;
+
+	return (i);
+}
