@@ -2,7 +2,7 @@
 #include "holberton.h"
 
 /**
- * argstostr - Concatenates all the arguments
+ * argstostr - Concatenate all the command line arguments
  * @ac: The number of arguments
  * @av: The arguments
  *
