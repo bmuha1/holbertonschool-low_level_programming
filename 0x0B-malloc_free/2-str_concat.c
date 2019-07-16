@@ -16,6 +16,11 @@ char *str_concat(char *s1, char *s2)
 	int size1 = _strlen(s1);
 	int size2 = _strlen(s2);
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+
 	cat = malloc(sizeof(char) * (size1 + size2) + 1);
 	for (i = 0; i < size1; i++)
 		cat[i] = s1[i];
