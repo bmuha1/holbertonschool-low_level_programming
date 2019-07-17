@@ -10,7 +10,7 @@
  */
 char **strtow(char *str)
 {
-	int i, j, k, wordcount, strlength;
+	int i, j, k, wordcount, strlength, tmplength;
 	char **words;
 
 	if (str == NULL || _strlen(str) == 0)
@@ -24,7 +24,10 @@ char **strtow(char *str)
 	{
 		if (str[i] != ' ')
 		{
-			words[j] = malloc(sizeof(char) * strlength);
+			for (k = 0, tmplength = 0; str[k] != '\0' &&
+				     str[k] != ' '; k++)
+				tmplength++;
+			words[j] = malloc(sizeof(char) * tmplength);
 			if (words[j] == NULL)
 			{
 				free(words);
