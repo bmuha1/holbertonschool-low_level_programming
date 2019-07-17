@@ -22,7 +22,8 @@ char **strtow(char *str)
 	words = malloc(sizeof(char *) * (wordcount + 1));
 	if (words == NULL)
 		return (NULL);
-	for (i = 0, j = 0; i < strlength; i++)
+	j = 0;
+	for (i = 0; i < strlength; i++)
 	{
 		if (str[i] != ' ')
 		{
