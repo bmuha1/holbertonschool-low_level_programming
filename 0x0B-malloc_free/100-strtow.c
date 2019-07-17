@@ -38,7 +38,7 @@ char **strtow(char *str)
 				return (NULL);
 			}
 			k = 0;
-			while (str[i] != ' ')
+			while (str[i] != '\0' && str[i] != ' ')
 			{
 				words[j][k] = str[i];
 				i++;
