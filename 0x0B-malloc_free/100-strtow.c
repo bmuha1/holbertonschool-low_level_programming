@@ -12,6 +12,7 @@ char **strtow(char *str)
 {
 	int i, j, k, wordcount, strlength;
 	char **words;
+
 	if (str == NULL || _strlen(str) == 0)
 		return (NULL);
 	strlength = _strlen(str);
