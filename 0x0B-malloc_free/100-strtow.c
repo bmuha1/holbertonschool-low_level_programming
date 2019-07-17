@@ -28,7 +28,7 @@ char **strtow(char *str)
 		{
 			for (k = 0; str[k] != '\0' && str[k] != ' '; k++)
 				k++;
-			words[j] = malloc(sizeof(char) * k);
+			words[j] = malloc(sizeof(char) * (k + 1));
 			if (words[j] == NULL)
 			{
 				free(words);
