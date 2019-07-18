@@ -1,5 +1,8 @@
 This project is for getting more practice with memory allocation
 
+holberton.h<br>
+Contains prototypes of all the functions in this directory
+
 0-malloc_checked.c<br>
 Allocate memory using malloc
 
