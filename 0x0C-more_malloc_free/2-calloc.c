@@ -10,9 +10,7 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int i;
 	void *p;
-	char *p2;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
@@ -21,9 +19,24 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (p == NULL)
 		return (NULL);
 
-	p2 = p;
-	for (i = 0; i < nmemb; i++)
-		p2[i] = 0;
-
+	p = _memset(p, 0, nmemb);
 	return (p);
+}
+
+/**
+ * _memset - Fill n bytes of memory with a constant byte
+ * @s: The memory area to fill
+ * @b: The constant byte
+ * @n: The number of bytes to fill
+ *
+ * Return: Pointer to the memory area s
+ */
+char *_memset(char *s, char b, unsigned int n)
+{
+	unsigned int i;
+
+	for (i = 0; i < n; i++)
+		s[i] = b;
+
+	return (s);
 }
