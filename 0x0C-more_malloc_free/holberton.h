@@ -11,5 +11,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 char *_memcpy(char *dest, char *src, unsigned int n);
 int _putchar(char c);
 int is_positive_number(char *number);
+void error(int status);
+void multiply(int *mul, char *s1, int length1, char *s2, int length2);
 
 #endif
