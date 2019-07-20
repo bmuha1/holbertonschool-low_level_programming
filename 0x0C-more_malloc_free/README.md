@@ -14,3 +14,9 @@ Allocate memory for an array
 
 3-array_range.c<br>
 Create an array of integers
+
+100-realloc.c<br>
+Reallocate a memory block
+
+101-mul.c<br>
+Multiply two numbers using algorithm taught by Laura Roudge
