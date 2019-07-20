@@ -156,6 +156,9 @@ void multiply(int *mul, char *s1, int length1, char *s2, int length2)
 	i = 0;
 	while (mul[i] == 0)
 		i++;
+	if (i >= length1 + length2 + 1)
+		_putchar('0');
+
 	for (; i < (length1 + length2); i++)
 		_putchar(mul[i] + '0');
 	_putchar('\n');
