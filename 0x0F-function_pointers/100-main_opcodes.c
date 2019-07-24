@@ -3,8 +3,8 @@
 
 /**
  * main - Print the opcodes of main function
- * argc: The number of command line arguments (must be 2)
- * argv: The command line arguments
+ * @argc: The number of command line arguments (must be 2)
+ * @argv: The command line arguments
  *
  * Return: 0 for success, 1 if argc != 2, 2 if number of bytes is negative
  */
