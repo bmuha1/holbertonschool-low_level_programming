@@ -4,7 +4,7 @@
 
 /**
  * main - Perform simple operations
- * @argc: The number of command line parameters (must be 3)
+ * @argc: The number of command line parameters (must be 4)
  * @argv: The command line parameters
  *
  * Return: 0 if successful, 98 if number of arguments is wrong,
