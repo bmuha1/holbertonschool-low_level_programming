@@ -10,7 +10,7 @@
 void print_all(const char * const format, ...)
 {
 	va_list valist;
-	unsigned int i = 0, print = 0;
+	unsigned int print, i = 0;
 	char *string;
 
 	while (format)
@@ -22,13 +22,13 @@ void print_all(const char * const format, ...)
 			switch (format[i])
 			{
 			case 'c':
-				printf("%c", (char) va_arg(valist, int));
+				printf("%c", va_arg(valist, int));
 				break;
 			case 'i':
 				printf("%d", va_arg(valist, int));
 				break;
 			case 'f':
-				printf("%f", (float) va_arg(valist, double));
+				printf("%f", va_arg(valist, double));
 				break;
 			case 's':
 				string = va_arg(valist, char *);
