@@ -10,5 +10,6 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m);
 
 int _strlen(const char *s);
 int _putchar(char c);
+unsigned int count_flipped_bits(unsigned long int n);
 
 #endif
