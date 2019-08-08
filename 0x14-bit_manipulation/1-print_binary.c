@@ -25,20 +25,3 @@ void print_binary(unsigned long int n)
 		}
 	}
 }
-
-/*
-
-        else
-        {
-                for (i = (unsigned long) 1 << 63; i > 0; i /= 2)
-                {
-                        if (n & i)
-                        {
-                                _putchar('1');
-                                start_printing = 1;
-                        }
-                        else if (start_printing)
-                                _putchar('0');
-                }
-        }
-*/
