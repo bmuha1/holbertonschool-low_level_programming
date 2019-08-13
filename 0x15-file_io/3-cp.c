@@ -28,9 +28,17 @@ int main(int argc, char *argv[])
 	while ((size = read(fd_from, buf, 1024)) > 0)
 	{
 		if (write(fd_to, buf, size) != size)
+		{
+			close(fd_from);
+			close(fd_to);
 			file_to_error(argv[2]);
+		}
 		if (size == -1)
+		{
+			close(fd_from);
+			close(fd_to);
 			file_from_error(argv[1]);
+		}
 	}
 
 	close_status = close(fd_from);
