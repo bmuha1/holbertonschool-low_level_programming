@@ -17,6 +17,7 @@ void args_error(void);
 void file_from_error(char *file);
 void file_to_error(char *file);
 void close_error(int fd);
+void print_elf(void);
 
 int _putchar(char c);
 int _strlen(char *s);
