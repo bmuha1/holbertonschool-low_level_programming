@@ -8,6 +8,7 @@ Contains prototypes for functions used in this project
 libholberton.so<br>
 Dynamic library containing the following functions:
 
+```
 int _putchar(char c);<br>
 int _islower(int c);<br>
 int _isalpha(int c);<br>
@@ -28,6 +29,7 @@ char *_strchr(char *s, char c);<br>
 unsigned int _strspn(char *s, char *accept);<br>
 char *_strpbrk(char *s, char *accept);<br>
 char *_strstr(char *haystack, char *needle);<br>
+```
 
 1-create_dynamic_lib.sh<br>
 Script that creates a dynamic library called liball.so from all the .c files in the current directory
@@ -35,8 +37,10 @@ Script that creates a dynamic library called liball.so from all the .c files in 
 100-operations.so<br>
 Dynamic library that contains the following C functions that can be called from Python:
 
+```
 int add(int a, int b);<br>
 int sub(int a, int b);<br>
 int mul(int a, int b);<br>
 int div(int a, int b);<br>
 int mod(int a, int b);<br>
+```
