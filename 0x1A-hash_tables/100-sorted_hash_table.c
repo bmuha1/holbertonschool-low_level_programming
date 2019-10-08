@@ -63,7 +63,6 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	new->sprev = NULL;
 	new->snext = NULL;
 	add_shash_node(ht, new);
-	add_shash_order(ht, new);
 	return (1);
 }
 
@@ -96,6 +95,7 @@ void add_shash_node(shash_table_t *ht, shash_node_t *node)
 			free(node->value);
 			free(node->key);
 			free(node);
+			return;
 		}
 		else
 		{
@@ -108,6 +108,7 @@ void add_shash_node(shash_table_t *ht, shash_node_t *node)
 		node->next = NULL;
 		ht->array[index] = node;
 	}
+	add_shash_order(ht, node);
 }
 
 /**
