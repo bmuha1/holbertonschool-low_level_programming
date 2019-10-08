@@ -10,7 +10,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 {
 	shash_table_t *new;
 
-	if (size <= 0)
+	if (size == 0)
 		return (NULL);
 
 	new = malloc(sizeof(shash_table_t));
@@ -42,7 +42,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
 	shash_node_t *new;
 
-	if (!ht || !ht->array || !key)
+	if (!ht || !ht->array || !key || strlen(key) == 0)
 		return (0);
 
 	new = malloc(sizeof(shash_node_t));
