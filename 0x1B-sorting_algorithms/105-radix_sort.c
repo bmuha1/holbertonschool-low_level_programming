@@ -12,7 +12,7 @@ void radix_sort(int *array, size_t size)
 	int *sorted = NULL;
 	int bucket[10] = {0};
 
-	if (!array)
+	if (!array || size < 2)
 		return;
 
 	sorted = malloc(size * sizeof(int));
