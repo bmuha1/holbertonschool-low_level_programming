@@ -42,6 +42,7 @@ void radix_sort(int *array, size_t size)
 		print_array(array, size);
 		digit *= 10;
 	}
+	free(sorted);
 }
 
 /**
