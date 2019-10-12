@@ -7,28 +7,35 @@
  */
 void merge_sort(int *array, size_t size)
 {
+	int *temp;
+
 	if (!array || size < 2)
 		return;
 
-	merge_recursive(array, size, 0, size - 1);
+	temp = malloc(size * sizeof(int));
+	if (!temp)
+		return;
+
+	merge_recursive(array, temp, 0, size - 1);
+	free(temp);
 }
 
 /**
  * merge_recursive - Merge sort recursively
  * @array: The array of integers
- * @size: The number of elements
+ * @temp: Temporary array
  * @l: The left-most index
  * @r: The right-most index
  */
-void merge_recursive(int *array, size_t size, int l, int r)
+void merge_recursive(int *array, int *temp, int l, int r)
 {
 	int i, m;
 
 	if (l < r)
 	{
 		m = (l + r - 1) / 2;
-		merge_recursive(array, size, l, m);
-		merge_recursive(array, size, m + 1, r);
+		merge_recursive(array, temp, l, m);
+		merge_recursive(array, temp, m + 1, r);
 
 		printf("Merging...\n[left]: ");
 		for (i = l; i <= m; i++)
@@ -45,26 +52,22 @@ void merge_recursive(int *array, size_t size, int l, int r)
 				printf(", ");
 		}
 
-		merge(array, size, l, m, r);
+		merge(array, temp, l, m, r);
 	}
 }
 
 /**
  * merge - Merge two lists together
  * @array: The array of integers
- * @size: The number of elements
+ * @temp: Temporary array
  * @l: The left-most index
  * @m: The middle index
  * @r: The right-most index
  */
-void merge(int *array, size_t size, int l, int m, int r)
+void merge(int *array, int *temp, int l, int m, int r)
 {
 	int i, j, k;
-	int *temp;
 
-	temp = malloc(size * sizeof(int));
-	if (!temp)
-		return;
 	i = l;
 	j = m + 1;
 	k = 0;
@@ -91,5 +94,4 @@ void merge(int *array, size_t size, int l, int m, int r)
 			printf(", ");
 	}
 	printf("\n");
-	free(temp);
 }

@@ -40,8 +40,8 @@ void partition(int *arr, size_t size, int lower_limit, int limit);
 int sort(int *arr, size_t size, int lower_limit, int limit);
 void swap(int *a, int *b, size_t size, int *arr);
 void super_count_sort(int *arry, size_t size, size_t new_size, int has_zero);
-void merge_recursive(int *array, size_t size, int l, int r);
-void merge(int *array, size_t size, int l, int m, int r);
+void merge_recursive(int *array, int *temp, int l, int r);
+void merge(int *array, int *temp, int l, int m, int r);
 void bitonic_recursive(int *array, size_t now, size_t size, int low, int dir);
 void bitonic_merge(int *array, size_t now, size_t size, int low, int dir);
 
