@@ -62,7 +62,8 @@ int sort_hoare(int *arr, size_t size, int lower_limit, int limit)
 		if (swap_index > limit)
 			return (limit);
 
-		swap(&arr[swap_index], &arr[limit], size, arr);
+		if (swap_index != limit)
+			swap(&arr[swap_index], &arr[limit], size, arr);
 	}
 }
 
