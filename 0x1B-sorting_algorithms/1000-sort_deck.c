@@ -7,9 +7,7 @@
  */
 void sort_deck(deck_node_t **deck)
 {
-	(void) deck;
-/*	qsort(*deck, 52, sizeof(deck_node_t), compare_cards); */
-	return;
+	qsort(*deck, 52, sizeof(deck_node_t), compare_cards);
 }
 
 /**
