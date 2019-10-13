@@ -75,8 +75,6 @@ void bitonic_merge(int *array, size_t now, size_t size, int low, int dir)
 				temp = array[j];
 				array[j] = array[i + j];
 				array[i + j] = temp;
-
-
 			}
 		}
 		bitonic_merge(array, i, size, low, dir);
