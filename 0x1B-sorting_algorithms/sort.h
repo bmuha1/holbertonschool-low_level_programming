@@ -37,6 +37,8 @@ void quick_sort_hoare(int *array, size_t size);
 
 void forward_swap(listint_t **list, listint_t **end, listint_t **current);
 void backward_swap(listint_t **list, listint_t **end, listint_t **current);
+void heapify_array(int *arr, size_t size);
+void shakedown(int *arr, size_t start, size_t end, size_t size);
 int get_max(int *array, size_t size);
 void partition(int *arr, size_t size, int lower_limit, int limit);
 int sort(int *arr, size_t size, int lower_limit, int limit);
