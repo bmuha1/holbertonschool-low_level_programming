@@ -1,16 +1,30 @@
-This project is for learning how to debug programs
+# 0x03. C - Debugging
 
-holberton.h
-Contains prototypes of all the functions in this directory
+## Description
+What you should learn from this project:
 
-0-main.c
-Test positive_or_negative function with a value of 0
+* What is debugging
+* What are some methods of debugging manually
+* How to read the error messages
 
-1-main.c
-Remove the infinite loop
+---
 
-2-largest_number.c
-Fix the largest_number function to work with all values
+### [0. Multiple mains](./0-main.c)
+* In most projects, we often give you only one main file to test with. For example, this main file is a test for a postitive_or_negative() function similar to the one you worked with in an earlier C project:
 
-3-print_remaining_days.c
-Fix the print_remaining_days function to work correctly with all dates
+
+### [1. Like, comment, subscribe](./1-main.c)
+* Copy this main file. Comment out (don’t delete it!) the part of the code that is causing the output to go into an infinite loop.
+
+
+### [2. 0 > 972?](./2-largest_number.c)
+* This program prints the largest of three integers.
+
+
+### [3. Leap year](./3-print_remaining_days.c)
+* This program converts a date to the day of year and determines how many days are left in the year, taking leap year into consideration.
+
+---
+
+## Author
+* **Brent Muha** - [bmuha1](https://github.com/bmuha1)
