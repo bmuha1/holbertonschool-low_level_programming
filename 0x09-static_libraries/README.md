@@ -1,32 +1,22 @@
-This project is for learning how to create our own static libraries
+# 0x09. C - Static libraries
 
-create_static_lib.sh<br>
-Creates a static library from all .c files in the current directory
+## Description
+What you should learn from this project:
 
-holberton.h<br>
-Contains prototypes of all the functions used in my static library
+* What is a static library, how does it work, how to create one, and how to use it
+* Basic usage of ar, ranlib, nm
 
-libholberton.a<br>
-My custom static library containing the functions listed below
+---
 
-Functions contained in my static library:<br>
-int _putchar(char c);<br>
-int _islower(int c);<br>
-int _isalpha(int c);<br>
-int _abs(int n);<br>
-int _isupper(int c);<br>
-int _isdigit(int c);<br>
-int _strlen(char *s);<br>
-void _puts(char *s);<br>
-char *_strcpy(char *dest, char *src);<br>
-int _atoi(char *s);<br>
-char *_strcat(char *dest, char *src);<br>
-char *_strncat(char *dest, char *src, int n);<br>
-char *_strncpy(char *dest, char *src, int n);<br>
-int _strcmp(char *s1, char *s2);<br>
-char *_memset(char *s, char b, unsigned int n);<br>
-char *_memcpy(char *dest, char *src, unsigned int n);<br>
-char *_strchr(char *s, char c);<br>
-unsigned int _strspn(char *s, char *accept);<br>
-char *_strpbrk(char *s, char *accept);<br>
-char *_strstr(char *haystack, char *needle);<br>
+### [0. A library is not a luxury but one of the necessities of life](./libholberton.a)
+* Create the static library libholberton.a containing all the functions listed below:
+
+
+### [1. Without libraries what have we? We have no past and no future](./create_static_lib.sh)
+* Create a script called create_static_lib.sh that creates a static library called liball.a from all the .c files that are in the current directory.
+
+
+---
+
+## Author
+* **Brent Muha** - [bmuha1](https://github.com/bmuha1)
