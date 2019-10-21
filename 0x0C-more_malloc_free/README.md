@@ -1,22 +1,37 @@
-This project is for getting more practice with memory allocation
+# 0x0C. C - More malloc, free
 
-holberton.h<br>
-Contains prototypes of all the functions in this directory
+## Description
+What you should learn from this project:
 
-0-malloc_checked.c<br>
-Allocate memory using malloc
+* How to use the exit function
+* What are the functions calloc and realloc from the standard library and how to use them
 
-1-string_nconcat.c<br>
-Concatenate two strings
+---
 
-2-calloc.c<br>
-Allocate memory for an array
+### [0. Trust no one](./0-malloc_checked.c)
+* Write a function that allocates memory using malloc.
 
-3-array_range.c<br>
-Create an array of integers
 
-100-realloc.c<br>
-Reallocate a memory block
+### [1. string_nconcat](./1-string_nconcat.c)
+* Write a function that concatenates two strings.
 
-101-mul.c<br>
-Multiply two numbers using algorithm taught by Laura Roudge
+
+### [2. _calloc](./2-calloc.c)
+* Write a function that allocates memory for an array, using malloc.
+
+
+### [3. array_range](./3-array_range.c)
+* Write a function that creates an array of integers.
+
+
+### [4. _realloc](./100-realloc.c)
+* Write a function that reallocates a memory block using malloc and free
+
+
+### [5. We must accept finite disappointment, but never lose infinite hope](./101-mul.c)
+* Write a program that multiplies two positive numbers.
+
+---
+
+## Author
+* **Brent Muha** - [bmuha1](https://github.com/bmuha1)
