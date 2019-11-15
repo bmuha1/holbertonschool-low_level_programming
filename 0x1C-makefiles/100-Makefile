@@ -3,9 +3,9 @@ SRC = main.c holberton.c
 OBJ = $(SRC:.c=.o)
 NAME = holberton
 CFLAGS = -Wall -Werror -Wextra -pedantic
-DEPS := $strip( $(wildcard m.h))
+DEPS := "$(wildcard m.h)"
 
-ifneq ($(DEPS),"")
+ifneq ($(DEPS), "")
 
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
