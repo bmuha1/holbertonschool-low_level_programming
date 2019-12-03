@@ -20,7 +20,7 @@ bst_t *bst_insert(bst_t **tree, int value)
 	if (!new)
 		return (NULL);
 
-	while (x != NULL)
+	while (x)
 	{
 		y = x;
 		if (value < x->n)
