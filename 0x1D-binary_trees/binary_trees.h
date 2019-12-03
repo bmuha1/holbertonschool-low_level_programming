@@ -52,15 +52,17 @@ binary_tree_t *binary_trees_ancestor_helper(binary_tree_t *root,
 					    const binary_tree_t *first,
 					    const binary_tree_t *second);
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
-void binary_tree_levelhelper(const binary_tree_t *tree, void (*func)(int),
-                             int level);
+void binary_tree_level_helper(const binary_tree_t *tree,
+			      void (*func)(int), int level);
 int binary_tree_is_complete(const binary_tree_t *tree);
 int binary_tree_is_complete_helper(const binary_tree_t *tree,
-                                   unsigned int index, size_t size);
+				   unsigned int index, size_t size);
 binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
 int binary_tree_is_bst(const binary_tree_t *tree);
+int binary_tree_is_bst_helper(binary_tree_t *tree, binary_tree_t *prev);
 bst_t *bst_insert(bst_t **tree, int value);
+bst_t *bst_node(int value);
 bst_t *array_to_bst(int *array, size_t size);
 bst_t *bst_search(const bst_t *tree, int value);
 bst_t *bst_remove(bst_t *root, int value);
