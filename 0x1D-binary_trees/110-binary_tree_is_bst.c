@@ -27,6 +27,12 @@ int binary_tree_is_bst_helper(binary_tree_t *tree, binary_tree_t *prev)
 {
 	if (tree)
 	{
+		if (tree->left)
+			if (tree->n == tree->left->n)
+				return (0);
+		if (tree->right)
+			if (tree->n == tree->right->n)
+				return (0);
 		if (!binary_tree_is_bst_helper(tree->left, prev))
 			return (0);
 		if (prev != NULL && tree->n <= prev->n)
