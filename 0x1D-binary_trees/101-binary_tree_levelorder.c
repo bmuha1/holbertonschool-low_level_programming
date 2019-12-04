@@ -18,7 +18,7 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 }
 
 /**
- * binary_tree_levelhelper - Call a function for all nodes at a certain level
+ * binary_tree_level_helper - Call a function for all nodes at a certain level
  * @tree: Pointer to the root node
  * @func: Pointer to a function to call for each node
  * @level: The level

@@ -9,8 +9,8 @@
  */
 bst_t *bst_insert(bst_t **tree, int value)
 {
-	bst_t *new;
-	bst_t *x = *tree;
+	bst_t *new = NULL;
+	bst_t *x = NULL;
 	bst_t *y = NULL;
 
 	if (!tree)
@@ -19,7 +19,8 @@ bst_t *bst_insert(bst_t **tree, int value)
 	new = bst_node(value);
 	if (!new)
 		return (NULL);
-
+	if (*tree)
+		x = *tree;
 	while (x)
 	{
 		y = x;
@@ -46,6 +47,5 @@ bst_t *bst_insert(bst_t **tree, int value)
 		y->right = new;
 		new->parent = y;
 	}
-
 	return (new);
 }

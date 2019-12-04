@@ -9,14 +9,11 @@
  */
 bst_t *array_to_bst(int *array, size_t size)
 {
-	bst_t **tree;
+	bst_t *tree = NULL;
 	size_t i;
 
-	tree = malloc(sizeof(bst_t *) * size);
-	if (!tree)
-		return (NULL);
-
 	for (i = 0; i < size; i++)
-		bst_insert(tree, array[i]);
-	return (*tree);
+		bst_insert(&tree, array[i]);
+
+	return (tree);
 }
