@@ -38,5 +38,8 @@ binary_tree_t *binary_trees_ancestor_helper(binary_tree_t *root,
 		return (root);
 	else if (left)
 		return (left);
-	return (right);
+	else if (right)
+		return (right);
+	else
+		return (NULL);
 }
