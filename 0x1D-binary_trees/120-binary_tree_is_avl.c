@@ -68,33 +68,29 @@ size_t binary_tree_height(const binary_tree_t *tree)
  */
 int binary_tree_is_bst(const binary_tree_t *tree)
 {
-	binary_tree_t *prev = NULL;
-
 	if (!tree)
 		return (0);
 
-	return (binary_tree_is_bst_helper((binary_tree_t *)tree, prev));
+	return (binary_tree_is_bst_helper((binary_tree_t *)tree, INT_MIN,
+					  INT_MAX));
 }
 
 /**
  * binary_tree_is_bst_helper - Check if a binary tree is a binary search tree
  * @tree: Pointer to the root node
- * @prev: Pointer to the previous node
+ * @min: The minimum for the current node
+ * @max: The maximum for the current node
  *
  * Return: 1 if it's a valid BST, 0 otherwise
  */
-int binary_tree_is_bst_helper(binary_tree_t *tree, binary_tree_t *prev)
+int binary_tree_is_bst_helper(binary_tree_t *tree, int min, int max)
 {
-	if (tree)
-	{
-		if (!binary_tree_is_bst_helper(tree->left, prev))
-			return (0);
-		if (prev != NULL && tree->n <= prev->n)
-			return (0);
-		prev = tree;
+	if (!tree)
+		return (1);
 
-		return (binary_tree_is_bst_helper(tree->right, prev));
-	}
+	if (tree->n < min || tree->n > max)
+		return (0);
 
-	return (1);
+	return (binary_tree_is_bst_helper(tree->left, min, tree->n - 1) &&
+		binary_tree_is_bst_helper(tree->right, tree->n + 1, max));
 }
