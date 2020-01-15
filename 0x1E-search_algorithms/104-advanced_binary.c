@@ -30,17 +30,19 @@ int binary_search_recursive(int *array, int low, int high, int value)
 	{
 		print_array(array, low, high);
 		mid = low + (high - low) / 2;
-		if (array[mid] == value)
-		{
-			if (array[mid - 1] != value || mid == 0)
-				return (mid);
-			return (binary_search_recursive(array, low, mid,
-							value));
-		}
 		if (array[mid] > value)
 			return (binary_search_recursive(array, low, mid - 1,
 							value));
-		return (binary_search_recursive(array, mid + 1, high, value));
+		else if (array[mid] < value)
+			return (binary_search_recursive(array, mid + 1, high,
+							value));
+		else
+		{
+			if (array[mid - 1] == value && mid != 0)
+				return (binary_search_recursive(array, low, mid,
+								value));
+			return (mid);
+		}
 	}
 
 	return (-1);
