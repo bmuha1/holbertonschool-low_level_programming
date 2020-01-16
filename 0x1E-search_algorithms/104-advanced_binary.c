@@ -36,11 +36,10 @@ int binary_search_recursive(int *array, int low, int high, int value)
 	mid = (low + high) / 2;
 
 	if (array[mid] > value)
-		return (binary_search_recursive(array, low, mid - 1, value));
+		return (binary_search_recursive(array, low, mid, value));
 	else if (array[mid] < value)
 		return (binary_search_recursive(array, mid + 1, high, value));
-
-	if (mid > 0 && array[mid - 1] == value)
+	else if (array[mid - 1] == value)
 		return (binary_search_recursive(array, low, mid, value));
 	return (mid);
 }
