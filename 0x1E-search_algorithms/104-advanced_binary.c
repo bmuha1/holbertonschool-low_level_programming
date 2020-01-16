@@ -29,26 +29,22 @@ int binary_search_recursive(int *array, int low, int high, int value)
 {
 	int mid;
 
-	if (high >= low)
-	{
-		print_array(array, low, high);
-		mid = low + (high - low) / 2;
-		if (array[mid] > value)
-			return (binary_search_recursive(array, low, mid - 1,
-							value));
-		else if (array[mid] < value)
-			return (binary_search_recursive(array, mid + 1, high,
-							value));
-		else
-		{
-			if (array[mid - 1] == value && mid != 0)
-				return (binary_search_recursive(array, low, mid,
-								value));
-			return (mid);
-		}
-	}
+	if (low > high)
+		return (-1);
 
-	return (-1);
+	print_array(array, low, high);
+	mid = (low + high) / 2;
+
+	if (array[mid] == value)
+	{
+		if (array[mid - 1] == value && mid != 0)
+			return (binary_search_recursive(array, low, mid,
+							value));
+		return (mid);
+	}
+	else if (array[mid] > value)
+		return (binary_search_recursive(array, low, mid - 1, value));
+	return (binary_search_recursive(array, mid + 1, high, value));
 }
 
 /**
